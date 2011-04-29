@@ -1,6 +1,12 @@
+== Stellar Cartography
+
 This is a lib for normalizing and parsing US street addresses.
 
-It was never really packaged for mass consumption, so use at your own discretion.
-
 It may have unexpected behavior, and was built specifically for parsing malformed addresses.
+
+Alpha grade.
+
+== Usage
+
+
 
