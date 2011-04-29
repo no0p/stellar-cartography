@@ -1,7 +1,7 @@
 module StellarCartography
   
   def self.parse_address(corpus)
-    {:address => parse_street(corpus), :city => parse_city(corpus), :state => parse_state(corpus), :zipcode => parse_zipcode(corpus)}
+    {:address => self.parse_street(corpus), :city => self.parse_city(corpus), :state => self.parse_state(corpus), :zipcode => self.parse_zipcode(corpus)}
   end
   
   def self.parse_street(corpus)
@@ -47,7 +47,7 @@ module StellarCartography
   def self.parse_city(corpus)
     corpus = self.prepare(corpus)
     
-    address = self.parse_address(corpus)
+    address = self.parse_street(corpus)
     state = self.parse_state(corpus)
     zipcode = self.parse_zipcode(corpus)
     
