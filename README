@@ -4,12 +4,12 @@ This is a lib for normalizing and parsing US street addresses.
 
 It may have unexpected behavior, and was built specifically for parsing malformed addresses.
 
-Alpha grade.  Also not optimized at all.
+Alpha grade.  Also not optimized at all. And really, no reason to use it over a geocoding API.  So here it is, useful or not.
 
 == Usage
 
-StellarCartography.parse_state '100 fake st., Portland, OR 97205'
-#=> 'OR'
+StellarCartography.parse_address '100 fake st., Portland, OR 97205'
+=> {:address=>"100 fake st", :city=>"portland", :state=>"OR", :zipcode=>"97205"}
 
 
 
