@@ -4,7 +4,7 @@ This is a lib for normalizing and parsing US street addresses.
 
 It may have unexpected behavior, and was built specifically for parsing malformed addresses.
 
-Alpha grade.  Also not optimized at all. And really, no reason to use it over a geocoding API.  So here it is, useful or not.
+Alpha grade.  Also not optimized at all. And really, no reason to use it over a geocoding API.  
 
 == Usage
 
