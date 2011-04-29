@@ -4,9 +4,13 @@ This is a lib for normalizing and parsing US street addresses.
 
 It may have unexpected behavior, and was built specifically for parsing malformed addresses.
 
-Alpha grade.
+Alpha grade.  Also not optimized at all.
 
 == Usage
+
+StellarCartography.parse_state '100 fake st., Portland, OR 97205'
+#=> 'OR'
+
 
 
 

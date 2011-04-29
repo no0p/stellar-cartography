@@ -1,6 +1,10 @@
 module StellarCartography
   
   def self.parse_address(corpus)
+    {:address => parse_street(corpus), :city => parse_city(corpus), :state => parse_state(corpus), :zipcode => parse_zipcode(corpus)}
+  end
+  
+  def self.parse_street(corpus)
     corpus = self.prepare(corpus)
     address = nil
     matched = false
