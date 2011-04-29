@@ -100,14 +100,6 @@ module StellarCartography
     corpus.to_s.downcase.wordcap
   end
   
-  def self.better_zipcode(a, b)
-    better = a.to_s
-    better = b unless b.to_s.match /[^0-9]/
-    better = a unless a.to_s.match /[^0-9]/
-    return better
-  end
-  
-  
   private
   
   def self.prepare(corpus)
