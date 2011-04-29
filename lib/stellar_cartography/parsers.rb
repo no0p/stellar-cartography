@@ -25,10 +25,10 @@ module StellarCartography
     corpus = self.prepare(corpus)
     states = STATES.to_a.flatten
     match = states.detect do |s|
-      corpus.match /\s#{i}(\s|,|$)/
+      corpus.match /\s#{s.downcase}(\s|,|$)/
     end
     
-    state = match.to_s
+    state = match.to_s.clean
     state = STATES.invert[state.wordcap] unless state.length < 3
     
     return state
