@@ -5,6 +5,6 @@ require 'stellar_cartography/symbols'
 require 'stellar_cartography/parsers'
 
 module StellarCartography
-  
+
 end
 
