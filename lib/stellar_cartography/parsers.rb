@@ -23,20 +23,15 @@ module StellarCartography
   
   def self.parse_state(corpus)
     corpus = self.prepare(corpus)
-    state = nil
     states = STATES.to_a.flatten
-    
-    states.each do |s|
-      match = corpus.match(/\s#{s.downcase}[\s,]/)
-      if match
-        state = match.to_s.gsub(/\s/, '')
-        
-        state = STATES.invert[state.wordcap] unless state.length < 3
-        break
-      end
+    match = states.detect do |s|
+      corpus.match /\s#{i}(\s|,|$)/
     end
     
-    return state.to_s
+    state = match.to_s
+    state = STATES.invert[state.wordcap] unless state.length < 3
+    
+    return state
   end
   
   def self.parse_zipcode(corpus)
