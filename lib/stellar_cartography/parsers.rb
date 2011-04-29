@@ -1,6 +1,6 @@
 module StellarCartography
   
-  	def self.parse_address(corpus)
+  def self.parse_address(corpus)
     corpus = self.prepare(corpus)
     address = nil
     matched = false

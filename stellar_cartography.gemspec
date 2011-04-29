@@ -9,6 +9,6 @@ spec = Gem::Specification.new do |s|
   s.has_rdoc = false
   s.executables = []
   s.authors = ["Robert Berry"]
-  s.files = ["lib/stellar_cartography.rb", "lib/stellar_cartography/cities.rb", "lib/stellar_cartography/states.rb", "lib/stellar_cartography/streets.rb", "lib/stellar_cartography/symbols.rb", "lib/stellar_cartography/parsers.rb", "README"]
+  s.files = ["lib/stellar_cartography.rb", "lib/stellar_cartography/cities.rb", "lib/stellar_cartography/states.rb", "lib/stellar_cartography/streets.rb", "lib/stellar_cartography/symbols.rb", "lib/stellar_cartography/parsers.rb", "lib/core_extensions/string.rb", "README"]
 end
 
