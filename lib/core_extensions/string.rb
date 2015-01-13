@@ -16,7 +16,7 @@ class String
   
   #extract number
   def numscrub
-    self.gsub(/[^0-9\.]/, '')
+    self.gsub(/[^0-9]/, '')
   end
   
   #only letters and spaces
