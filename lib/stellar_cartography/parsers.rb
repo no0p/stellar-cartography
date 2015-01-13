@@ -1,5 +1,23 @@
 module StellarCartography
   
+  #
+  # Return true if a string contains street language
+  #
+  def self.is_street?(corpus)
+    is_address = false
+    address = self.prepare(corpus)
+    [PRIMARY_STREET_INDICATORS, STREET_INDICATORS].each do |a|
+      street_indicator = (a.values + a.keys).detect do |si|
+        address.match(/\s#{si.downcase}\s/)
+      end
+      if street_indicator.present?
+        is_address = true
+        break
+      end
+    end
+    return is_address
+  end
+  
   def self.parse_address(corpus)
     {:address => self.parse_street(corpus), :city => self.parse_city(corpus), :state => self.parse_state(corpus), :zipcode => self.parse_zipcode(corpus)}
   end
