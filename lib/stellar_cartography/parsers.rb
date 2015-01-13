@@ -5,8 +5,10 @@ module StellarCartography
   #
   def self.is_street?(corpus)
     is_address = false
-    address = self.prepare(corpus)
-    [PRIMARY_STREET_INDICATORS, STREET_INDICATORS].each do |a|
+    address = self.prepare(corpus).strip
+    
+    return false unless address.match(/[0-9]|^one|^two|^three|^four|^five|^six|^seven|^eight|^nine/)
+    [PRIMARY_STREET_INDICATORS, STREET_INDICATORS, ORDINAL_NUMBERS, PO_BOX_INDICATORS].each do |a|
       street_indicator = (a.values + a.keys).detect do |si|
         address.match(/\s#{si.downcase}/)
       end
