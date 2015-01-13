@@ -17,6 +17,17 @@ module StellarCartography
         break
       end
     end
+    
+    [PO_BOX_INDICATORS].each do |a|
+      street_indicator = (a.values + a.keys).detect do |si|
+        address.match(/^#{si.downcase}/)
+      end
+      if street_indicator.present?
+        is_address = true
+        break
+      end
+    end unless is_address
+    
     return is_address
   end
   
