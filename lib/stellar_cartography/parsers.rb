@@ -3,7 +3,7 @@ module StellarCartography
   #
   # Return true if a string contains street language
   #
-  def self.is_street?(corpus)
+  def self.is_street?(corpus, display = false)
     is_address = false
     address = self.prepare(corpus).strip
     street_indicator = nil
@@ -28,8 +28,10 @@ module StellarCartography
         break
       end
     end unless is_address
-    
-    return is_address, street_indicator
+
+		puts street_indicator if display    
+
+    return is_address
   end
   
   def self.parse_address(corpus)
