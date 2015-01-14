@@ -11,7 +11,7 @@ module StellarCartography
     return false unless address.match(/[0-9]|^one|^two|^three|^four|^five|^six|^seven|^eight|^nine/)
     [PRIMARY_STREET_INDICATORS, STREET_INDICATORS, ORDINAL_NUMBERS, PO_BOX_INDICATORS].each do |a|
       street_indicator = (a.values + a.keys).detect do |si|
-        address.match(/\s#{si.downcase}/)
+        address.match(/\s#{si.downcase}\s|\s#{si.downcase}$)
       end
       if street_indicator.present?
         is_address = true
@@ -21,7 +21,7 @@ module StellarCartography
     
     [PO_BOX_INDICATORS].each do |a|
       street_indicator = (a.values + a.keys).detect do |si|
-        address.match(/^#{si.downcase}/)
+        address.match(/^#{si.downcase}\s/)
       end
       if street_indicator.present?
         is_address = true
