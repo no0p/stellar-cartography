@@ -145,8 +145,12 @@ module StellarCartography
     end
     
     WIPE_SYMBOLS.each do |s|
-      corpus.gsub!(/#{s}/, ' ')
+      corpus.gsub!(/#{s}/, '')
     end
+
+		SPACE_SYMBOLS.each do |s|
+			corpus.gsub!(/#{s}/, ' ')
+		end
     
     return corpus.to_s
   end
