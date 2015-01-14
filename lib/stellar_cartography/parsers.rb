@@ -6,7 +6,8 @@ module StellarCartography
   def self.is_street?(corpus)
     is_address = false
     address = self.prepare(corpus).strip
-    
+    street_indicator = nil
+
     return false unless address.match(/[0-9]|^one|^two|^three|^four|^five|^six|^seven|^eight|^nine/)
     [PRIMARY_STREET_INDICATORS, STREET_INDICATORS, ORDINAL_NUMBERS, PO_BOX_INDICATORS].each do |a|
       street_indicator = (a.values + a.keys).detect do |si|
@@ -28,7 +29,7 @@ module StellarCartography
       end
     end unless is_address
     
-    return is_address
+    return is_address, street_indicator
   end
   
   def self.parse_address(corpus)
