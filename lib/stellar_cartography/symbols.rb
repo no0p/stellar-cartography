@@ -8,7 +8,7 @@ module StellarCartography
   
   WIPE_SYMBOLS = ['\.']
  	
-	SPACE_SYMBOLS = ['-', '\/'] 
+	SPACE_SYMBOLS = ['\/'] 
   DOMAIN_WORDS = {"arpt" => "airport", "ctr" => "center"}
   
 end
