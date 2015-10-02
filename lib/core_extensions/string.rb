@@ -56,7 +56,7 @@ class String
   
   #obv
   def letters_and_numbers_and_spaces
-    self.gsub(/[^a-zA-Z0-9\s]/, '')
+    self.gsub(/[^a-zA-Z0-9\s\#]/, '')
   end
   
   
