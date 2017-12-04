@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name = 'stellar_cartography'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.date = '2011-04-29'
   s.summary = 'US street address parsing for dubiously normalized addresses'
   s.email = "berrydigital@gmail.com"
