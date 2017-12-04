@@ -1,4 +1,4 @@
-module StellarCartography
+module StellarCartographyString
   refine String do
 
     #space clean
